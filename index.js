@@ -11,3 +11,11 @@ function displayRepositories() {
     var repos = JSON.parse(this.responseText)
     console.log(repos)
 }
+
+function getCommits() {
+
+}
+
+function getBranches() {
+
+}
