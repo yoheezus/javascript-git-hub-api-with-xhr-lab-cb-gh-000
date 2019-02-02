@@ -1,5 +1,6 @@
+var username = document.getElementById("username").value
+
 function getRepositories() {
-    var username = document.getElementById("username").value
     console.log(username)
     const  req = new XMLHttpRequest();
     req.addEventListener("load", displayRepositories)
@@ -24,8 +25,11 @@ function displayRepositories() {
     document.getElementById("repositories").innerHTML = repoList
 }
 
-function getCommits() {
-
+function getCommits(el) {
+    const name = el.dataset.repo
+    const req = new XMLHttpRequest()
+    req.addEventListener("load", showCommits)
+    req.open("GET", )
 }
 
 function getBranches() {
