@@ -8,6 +8,6 @@ function getRepositories() {
 }
 
 function showRepositories() {
-    var repos = JSON.PARSE(this.responseText)
+    var repos = JSON.parse(this.responseText)
     console.log(repos)
 }
