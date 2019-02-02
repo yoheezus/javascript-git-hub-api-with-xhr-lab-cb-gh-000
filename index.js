@@ -48,6 +48,14 @@ function showCommits(){
     document.getElementById("details").innerHTML = commitsList
 }
 
-function getBranches() {
+function getBranches(el) {
     console.log("Get branches function")
+    const name = el.dataset.repo
+    const req = new XMLHttpRequest()
+    req.addEventListener("load", showBranches)
+    req.open("GET", "https://api.github.com/repos/" + username.value + "/" + name + "/branches")
+}
+
+function showBranches() {
+
 }
