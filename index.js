@@ -49,7 +49,6 @@ function displayCommits(){
 }
 
 function getBranches(el) {
-    console.log("Get branches function")
     const name = el.dataset.repo
     const req = new XMLHttpRequest()
     req.addEventListener("load", displayBranches)
