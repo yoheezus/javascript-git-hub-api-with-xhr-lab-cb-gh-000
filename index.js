@@ -43,7 +43,7 @@ function showCommits(){
             "</strong> - " +
             commit.commit.message +
             "</li>"
-    ).join("")</ul>}`
+    ).join("")}</ul>`
     document.getElementById("details").innerHTML = commitsList
 }
 
