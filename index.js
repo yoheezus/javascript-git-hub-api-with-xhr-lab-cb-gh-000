@@ -34,8 +34,17 @@ function getCommits(el) {
 }
 
 function showCommits(){
-    var commitsList = JSON.parse(this.responseText)
-    console.log(commitsList)
+    var commits = JSON.parse(this.responseText)
+    console.log(commits)
+    const commitsList = `<ul>${commits.map(
+        commit =>
+            "<li><strong>" +
+            commit.commit.author.name +
+            "</strong> - " +
+            commit.commit.message +
+            "</li>"
+    ).join("")</ul>}`
+    document.getElementById("details").innerHTML = commitsList
 }
 
 function getBranches() {
