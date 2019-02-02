@@ -49,5 +49,5 @@ function showCommits(){
 }
 
 function getBranches() {
-
+    console.log("Get branches function")
 }
