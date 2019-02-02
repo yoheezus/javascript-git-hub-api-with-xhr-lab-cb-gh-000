@@ -54,6 +54,7 @@ function getBranches(el) {
     const req = new XMLHttpRequest()
     req.addEventListener("load", showBranches)
     req.open("GET", "https://api.github.com/repos/" + username.value + "/" + name + "/branches")
+    req.send()
 }
 
 function showBranches() {
