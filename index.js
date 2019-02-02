@@ -1,6 +1,7 @@
-var username = document.getElementById("username").value;
+
 
 function getRepositories() {
+    var username = document.getElementById("username").value;
     console.log(username)
     const  req = new XMLHttpRequest();
     req.addEventListener("load", displayRepositories)
