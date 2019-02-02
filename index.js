@@ -29,12 +29,12 @@ function displayRepositories() {
 function getCommits(el) {
     const name = el.dataset.repo
     const req = new XMLHttpRequest()
-    req.addEventListener("load", showCommits)
+    req.addEventListener("load", displayCommits)
     req.open("GET", "https://api.github.com/repos/"+ username.value + "/" + name + "/commits")
     req.send()
 }
 
-function showCommits(){
+function displayCommits(){
     var commits = JSON.parse(this.responseText)
     console.log(commits)
     const commitsList = `<ul>${commits.map(
@@ -52,12 +52,12 @@ function getBranches(el) {
     console.log("Get branches function")
     const name = el.dataset.repo
     const req = new XMLHttpRequest()
-    req.addEventListener("load", showBranches)
+    req.addEventListener("load", displayBranches)
     req.open("GET", "https://api.github.com/repos/" + username.value + "/" + name + "/branches")
     req.send()
 }
 
-function showBranches() {
+function displayBranches() {
     var branches = JSON.parse(this.responseText)
     console.log(branches)
     const branchesList = `<ul>${branches.map(
