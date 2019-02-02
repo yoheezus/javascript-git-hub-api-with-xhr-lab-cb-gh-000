@@ -33,6 +33,11 @@ function getCommits(el) {
     req.send()
 }
 
+function showCommits(){
+    var commitsList = JSON.parse(this.responseText)
+    console.log(commitsList)
+}
+
 function getBranches() {
 
 }
